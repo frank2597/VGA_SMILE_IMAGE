@@ -278,10 +278,10 @@ assign HDMI_TX_CLK =   VGA_CLK;
 //assign HDMI_TX_D   = TX_DE? { VGA_R, VGA_G, VGA_B  }  :0 ;  
 assign HDMI_TX_D   = TX_DE? { w_red, w_green, w_blue  }  :0 ; 
 assign HDMI_TX_DE  = READ_Request;           
-//assign HDMI_TX_HS  = VGA_HS                 ;
-//assign HDMI_TX_VS  = VGA_VS                 ;
-assign HDMI_TX_HS  = w_hsync                 ;// screen goes black
-assign HDMI_TX_VS  = w_vsync                 ;
+assign HDMI_TX_HS  = VGA_HS                 ;
+assign HDMI_TX_VS  = VGA_VS                 ;
+//assign HDMI_TX_HS  = w_hsync                 ;
+//assign HDMI_TX_VS  = w_vsync                 ;
 
 //-- HDMI SOUND ON -OFF
 assign HDMI_I2S=SW[0]?HDMI_I2S_:0;
